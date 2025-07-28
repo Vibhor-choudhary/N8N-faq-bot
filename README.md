@@ -2,9 +2,9 @@
 
 A modern, **no-code AI-powered FAQ chatbot** using [n8n](https://n8n.io/), Google Sheets, and Gemini AI — inspired by [Vibhor Choudhary's #BuildInPublic Day 9](https://www.linkedin.com/posts/vibhor-choudhary_buildinpublic-day9-30daysofai-activity-7348953339792891905-P0y5) during the #30DaysOfAI challenge.
 
-![n8n logo](https://n8n.io/wp-content/uploads/2023/11/logo-512x512-1.png)
-![Google Sheets logo](https://upload.wikimedia.org/wikipedia/commons/1/1a/Google_Sheets_Logo_16.png)
-![Gemini AI logo](https://upload.wikimedia.org/wikipedia/commons/4/4e/Google_Gemini_logo.svg)
+![n8n logo]([https://n8n.io/wp-content/uploads/2023/11/logo-512x512-1.png)](https://commons.wikimedia.org/wiki/Special:FilePath/N8n_logo.png)
+![Google Sheets logo]([https://upload.wikimedia.org/wikipedia/commons/1/1a/Google_Sheets_Logo_16.png](https://img.icons8.com/?size=512&id=30461&format=png))
+![Gemini AI logo]([https://upload.wikimedia.org/wikipedia/commons/4/4e/Google_Gemini_logo.svg](https://en.wikipedia.org/wiki/Special:FilePath/Google_Gemini_logo.svg))
 
 ---
 
@@ -41,7 +41,7 @@ A modern, **no-code AI-powered FAQ chatbot** using [n8n](https://n8n.io/), Googl
 | What is n8n?             | An open-source workflow automation tool.    |
 | How does Gemini work?    | It's an LLM that generates conversational AI replies.|
 
-*(Add your questions below!)*
+* ## Sample Google Sheet: https://docs.google.com/spreadsheets/d/1gCvK0b-sAEGcKkoAHKdHbENsB9MVZCxNCyO8H7DUR3Q/edit?usp=sharing *
 
 ---
 
