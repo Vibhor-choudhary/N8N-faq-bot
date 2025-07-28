@@ -1,0 +1,157 @@
+{
+  "name": "FAQ Bot",
+  "nodes": [
+    {
+      "parameters": {
+        "public": true,
+        "options": {}
+      },
+      "type": "@n8n/n8n-nodes-langchain.chatTrigger",
+      "typeVersion": 1.1,
+      "position": [
+        -220,
+        20
+      ],
+      "id": "ec8784aa-56db-40d7-8dd2-4dbe91625f80",
+      "name": "When chat message received",
+      "webhookId": "1570d3f2-5904-40bc-8553-23247e8af6ad"
+    },
+    {
+      "parameters": {},
+      "type": "@n8n/n8n-nodes-langchain.memoryBufferWindow",
+      "typeVersion": 1.3,
+      "position": [
+        80,
+        220
+      ],
+      "id": "b108aa44-ff63-4af0-a994-2a93203c2d85",
+      "name": "Simple Memory"
+    },
+    {
+      "parameters": {
+        "options": {
+          "systemMessage": "You are a highly reliable and helpful assistant.\n\nYour primary role is to answer questions strictly and exclusively using the content provided in the designated document stored in Google Sheets.\n\nGuidelines:\n\nSource Verification:\n\nBefore responding, you must carefully review and verify all relevant information within the Google Sheets document and the FAQ list.\n\nDo not rely on any external knowledge, assumptions, or prior training data.\n\nIf the question the users asks is in the FAQ list, use that answer.\n\nAnswer Accuracy:\n\nAll answers must be directly supported by evidence found in the document.\n\nIf you reference information, ensure you can point to the exact section or wording in the document.\n\nHandling Insufficient Information:\n\nIf the document does not contain enough information to fully and accurately answer the question, clearly state that you don’t have sufficient data rather than speculating.\n\nFor example, you may respond with:\n\n“I’m sorry, but the provided document does not contain enough information to answer this question.”\n\nTone and Style:\n\nBe clear, concise, and professional in your responses.\n\nAvoid unnecessary elaboration beyond what is in the document."
+        }
+      },
+      "type": "@n8n/n8n-nodes-langchain.agent",
+      "typeVersion": 1.9,
+      "position": [
+        0,
+        0
+      ],
+      "id": "ec228f2b-d6a6-4e7b-bffb-a33226fed392",
+      "name": "AI Agent"
+    },
+    {
+      "parameters": {
+        "documentId": {
+          "__rl": true,
+          "value": "1gCvK0b-sAEGcKkoAHKdHbENsB9MVZCxNCyO8H7DUR3Q",
+          "mode": "list",
+          "cachedResultName": "n8n_FAQ_Table",
+          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1gCvK0b-sAEGcKkoAHKdHbENsB9MVZCxNCyO8H7DUR3Q/edit?usp=drivesdk"
+        },
+        "sheetName": {
+          "__rl": true,
+          "value": "gid=0",
+          "mode": "list",
+          "cachedResultName": "Sheet1",
+          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1gCvK0b-sAEGcKkoAHKdHbENsB9MVZCxNCyO8H7DUR3Q/edit#gid=0"
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.googleSheetsTool",
+      "typeVersion": 4.5,
+      "position": [
+        300,
+        220
+      ],
+      "id": "88bf5648-1398-4690-a6ea-87bac705ed5d",
+      "name": "FAQ1",
+      "credentials": {
+        "googleSheetsOAuth2Api": {
+          "id": "cQ6LP73Ohfm70t2z",
+          "name": "Google Sheets account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "modelName": "models/gemini-2.5-flash",
+        "options": {}
+      },
+      "type": "@n8n/n8n-nodes-langchain.lmChatGoogleGemini",
+      "typeVersion": 1,
+      "position": [
+        -140,
+        240
+      ],
+      "id": "857098a3-44c2-4f03-9ff0-b2594295d5c8",
+      "name": "Google Gemini Chat Model",
+      "credentials": {
+        "googlePalmApi": {
+          "id": "1RkdiDlCqFqwYYlw",
+          "name": "Google Gemini(PaLM) Api account"
+        }
+      }
+    }
+  ],
+  "pinData": {},
+  "connections": {
+    "When chat message received": {
+      "main": [
+        [
+          {
+            "node": "AI Agent",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Simple Memory": {
+      "ai_memory": [
+        [
+          {
+            "node": "AI Agent",
+            "type": "ai_memory",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "FAQ1": {
+      "ai_tool": [
+        [
+          {
+            "node": "AI Agent",
+            "type": "ai_tool",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Google Gemini Chat Model": {
+      "ai_languageModel": [
+        [
+          {
+            "node": "AI Agent",
+            "type": "ai_languageModel",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "active": false,
+  "settings": {
+    "executionOrder": "v1"
+  },
+  "versionId": "46d1c50b-fb62-4a7a-b9df-e67340c3f68f",
+  "meta": {
+    "templateCredsSetupCompleted": true,
+    "instanceId": "da5066d4a64ef824e91c602d5ca369b1a608ee8b757112507cdb34d1ce380b07"
+  },
+  "id": "T2mUyarA9iuFAe6z",
+  "tags": []
+}
