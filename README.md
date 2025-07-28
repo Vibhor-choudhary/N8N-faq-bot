@@ -2,9 +2,8 @@
 
 A modern, **no-code AI-powered FAQ chatbot** using [n8n](https://n8n.io/), Google Sheets, and Gemini AI — inspired by [Vibhor Choudhary's #BuildInPublic Day 9](https://www.linkedin.com/posts/vibhor-choudhary_buildinpublic-day9-30daysofai-activity-7348953339792891905-P0y5) during the #30DaysOfAI challenge.
 
-![n8n logo]([https://n8n.io/wp-content/uploads/2023/11/logo-512x512-1.png)]
-![Google Sheets logo]([https://img.icons8.com/?size=512&id=30461&format=png])
-![Gemini AI logo]([https://en.wikipedia.org/wiki/Special:FilePath/Google_Gemini_logo.svg]
+<img width="600" height="600" alt="n8n logo" src="https://github.com/user-attachments/assets/5e25ab36-9a80-46af-a45e-a5cbc422f4d2" />
+
 
 ---
 
