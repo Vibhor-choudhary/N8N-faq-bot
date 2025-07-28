@@ -40,7 +40,7 @@ A modern, **no-code AI-powered FAQ chatbot** using [n8n](https://n8n.io/), Googl
 | What is n8n?             | An open-source workflow automation tool.    |
 | How does Gemini work?    | It's an LLM that generates conversational AI replies.|
 
-* ## Sample Google Sheet: https://docs.google.com/spreadsheets/d/1gCvK0b-sAEGcKkoAHKdHbENsB9MVZCxNCyO8H7DUR3Q/edit?usp=sharing *
+* ## [Sample Google Sheet:](https://docs.google.com/spreadsheets/d/1gCvK0b-sAEGcKkoAHKdHbENsB9MVZCxNCyO8H7DUR3Q/edit?usp=sharing) *
 
 ---
 
