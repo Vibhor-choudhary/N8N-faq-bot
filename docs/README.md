@@ -30,6 +30,12 @@ cd n8n-faq-bot
 - Connect chat/webhook entry points as desired.
 - Modify workflow as needed for your platform (Slack, WhatsApp, website, etc.).
 
+#### Screenshot
+
+<img width="1162" height="772" alt="Screenshot 2025-07-10 at 7 08 00 PM" src="https://github.com/user-attachments/assets/93502c6c-0558-4043-9e51-63d7ae618f6f" />
+
+
+
 ### 3. Troubleshooting
 
 - **Credential Issues:** Ensure API credentials are added in n8n and not hard-coded.
@@ -81,10 +87,10 @@ If you extend the bot with additional APIs (e.g., Telegram, Discord, OpenAI):
 
 ### 1. Google Sheet Example Format
 
-| Question        | Answer                               |
-|-----------------|--------------------------------------|
-| What is n8n?    | An open-source workflow tool.        |
-| Who made this?  | Inspired by #30DaysOfAI, Vibhor C.   |
+| Question        | Answer                                       |
+|-----------------|----------------------------------------------|
+| What is n8n?    | An open-source workflow tool.                |
+| Who made this?  | Inspired by #30DaysOfAI, Vibhor Choudhary.   |
 
 ### 2. Workflow Use Case
 
